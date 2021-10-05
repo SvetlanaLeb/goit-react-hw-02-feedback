@@ -30,6 +30,7 @@ class App extends Component {
 
   countPositiveFeedbackPercentage(good, total) {
     let positiveFeedbackPercentage = 0;
+
     if (good) {
       positiveFeedbackPercentage = Math.round((good * 100) / total);
     }
@@ -45,7 +46,7 @@ class App extends Component {
         <Section title={'Please leave feedback'}>
           <FeedbackOptions
             options={['good', 'neutral', 'bad']}
-            countFeedback={this.handleBtnClick}
+            onCountFeedback={this.handleBtnClick}
           />
         </Section>
         <Section title={'Statistics'}>
